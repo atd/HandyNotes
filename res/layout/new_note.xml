@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#FBEB56"
+	android:orientation="vertical">
+	
+	<EditText android:id="@+id/newNoteText"
+	          android:layout_height="wrap_content"
+	          android:layout_width="fill_parent"></EditText>
+
+    <Button android:text="@string/add"
+            android:id="@+id/add_button"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"></Button>
+
+
+</LinearLayout>
