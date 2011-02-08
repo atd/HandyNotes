@@ -1,3 +1,5 @@
 = HandyNotes
 
 Simple Android application that provides widgets to have notes at hand
+
+https://github.com/atd/HandyNotes
