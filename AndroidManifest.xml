@@ -12,12 +12,14 @@
 				android:resource="@xml/widget_info" />
 		</receiver>
 
-		<activity android:name=".NewNote">
+		<activity android:name=".NewNote"
+		          android:windowSoftInputMode="stateAlwaysVisible|adjustResize">
 		    <intent-filter>
 		        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
 		    </intent-filter>
 		</activity>
-		<activity android:name=".EditNote"></activity>
+		<activity android:name=".EditNote"
+		          android:windowSoftInputMode="stateAlwaysVisible|adjustResize"></activity>
     </application>
     <uses-sdk android:minSdkVersion="3" />
 
