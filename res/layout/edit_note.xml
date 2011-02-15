@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
-	android:background="#FBEB56"
-	android:orientation="vertical">
+	android:background="#FBEB56">
 	
-	<EditText android:id="@+id/editNoteText"
-	          android:layout_height="wrap_content"
-	          android:layout_width="fill_parent"></EditText>
-
-    <Button android:text="@string/update"
+	<Button android:text="@string/update"
             android:id="@+id/updateButton"
             android:layout_height="wrap_content"
-            android:layout_width="fill_parent"></Button>
+            android:layout_width="fill_parent"
+            android:layout_alignParentBottom="true"></Button>
+	
+	<EditText android:id="@+id/editNoteText"
+	          android:layout_height="fill_parent"
+	          android:layout_width="fill_parent"
+	          android:layout_above="@id/updateButton"
+	          android:gravity="top"></EditText>
 
-
-</LinearLayout>
+</RelativeLayout>
