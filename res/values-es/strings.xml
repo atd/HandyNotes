@@ -4,4 +4,9 @@
     <string name="app_name">HandyNotes</string>
 <string name="add">Añadir</string>
 <string name="update">Actualizar</string>
+<string name="handy_note_11">Nota accesible (1x1)</string>
+<string name="handy_note_22">Nota accesible (2x2)</string>
+<string name="handy_note_33">Nota accesible (3x3)</string>
+<string name="handy_note_42">Nota accesible (4x2)</string>
+<string name="handy_note_44">Nota accesible (4x4)</string>
 </resources>

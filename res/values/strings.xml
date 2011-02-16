@@ -4,4 +4,9 @@
     <string name="app_name">HandyNotes</string>
 <string name="add">Add</string>
 <string name="update">Update</string>
+<string name="handy_note_11">Handy note (1x1)</string>
+<string name="handy_note_22">Handy note (2x2)</string>
+<string name="handy_note_33">Handy note (3x3)</string>
+<string name="handy_note_42">Handy note (4x2)</string>
+<string name="handy_note_44">Handy note (4x4)</string>
 </resources>
