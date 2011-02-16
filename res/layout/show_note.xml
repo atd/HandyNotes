@@ -1,21 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/showNote"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:padding="5dp">
+    android:layout_height="fill_parent">
     
-    <LinearLayout
-    	android:id="@+id/showNote"
-		android:layout_width="fill_parent"
+    <ImageView
+      android:id="@+id/shadowTL"
+	  android:src="@drawable/shadow_tl"
+	  android:layout_alignParentTop="true"
+	  android:layout_alignParentLeft="true"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"></ImageView>
+
+    <ImageView
+      android:id="@+id/shadowTR"
+	  android:src="@drawable/shadow_tr"
+	  android:layout_alignParentTop="true"
+	  android:layout_alignParentRight="true"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"></ImageView>
+
+	<ImageView
+      android:id="@+id/shadowT"
+	  android:src="@drawable/shadow_t"
+	  android:layout_alignParentTop="true"
+	  android:layout_toRightOf="@id/shadowTL"
+	  android:layout_toLeftOf="@id/shadowTR"
+	  android:scaleType="fitXY"
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content"></ImageView>
+
+    <ImageView
+      android:id="@+id/shadowBR"
+	  android:src="@drawable/shadow_br"
+	  android:layout_alignParentBottom="true"
+	  android:layout_alignParentRight="true"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"></ImageView>
+
+	<ImageView
+      android:id="@+id/shadowR"
+	  android:src="@drawable/shadow_r"
+	  android:layout_alignParentRight="true"
+	  android:layout_above="@id/shadowBR"
+	  android:layout_below="@id/shadowTR"
+	  android:scaleType="fitXY"
+	  android:layout_width="wrap_content"
+	  android:layout_height="fill_parent"></ImageView>
+	
+    <ImageView
+      android:id="@+id/shadowBL"
+	  android:src="@drawable/shadow_bl"
+	  android:layout_alignParentBottom="true"
+	  android:layout_alignParentLeft="true"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"></ImageView>
+         
+    <ImageView
+      android:id="@+id/shadowB"
+	  android:src="@drawable/shadow_b"
+	  android:layout_alignParentBottom="true"
+	  android:layout_toRightOf="@id/shadowBL"
+	  android:layout_toLeftOf="@id/shadowBR"
+	  android:scaleType="fitXY"
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content"></ImageView>
+	  
+	<ImageView
+      android:id="@+id/shadowL"
+	  android:src="@drawable/shadow_l"
+	  android:layout_alignParentLeft="true"
+	  android:layout_above="@id/shadowBL"
+	  android:layout_below="@id/shadowTL"
+	  android:scaleType="fitXY"
+	  android:layout_width="wrap_content"
+	  android:layout_height="fill_parent"></ImageView>
+
+	<TextView
+		android:id="@+id/showNoteText"
+	   	android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
 		android:background="#FBEB56"
-		android:orientation="vertical"
-		android:padding="5dp">
-
-	
-		<TextView android:id="@+id/showNoteText"
-		    	  android:layout_width="fill_parent"
-				  android:layout_height="fill_parent"
-		          android:textColor="#000"></TextView>
-	</LinearLayout> 
-</LinearLayout>
+		android:textColor="#000"
+		android:padding="5dp"
+		android:layout_above="@id/shadowB"
+		android:layout_toLeftOf="@id/shadowR"
+		android:layout_toRightOf="@id/shadowL"
+		android:layout_below="@id/shadowT"></TextView>
+		 
+	 
+</RelativeLayout>
