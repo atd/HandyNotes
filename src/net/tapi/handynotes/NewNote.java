@@ -26,7 +26,6 @@ public class NewNote extends Activity {
         Button button = (Button) findViewById(R.id.add_button);
         button.setOnClickListener(new View.OnClickListener() {
 			
-			@Override
 			public void onClick(View v) {
 				saveNote();
 				addWidget();				

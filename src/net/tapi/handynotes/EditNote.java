@@ -42,7 +42,6 @@ public class EditNote extends Activity {
         Button button = (Button) findViewById(R.id.updateButton);
         button.setOnClickListener(new View.OnClickListener() {
 			
-			@Override
 			public void onClick(View v) {
 				saveNote();
 				updateWidget();				
