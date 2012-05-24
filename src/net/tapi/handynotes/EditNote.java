@@ -2,11 +2,13 @@ package net.tapi.handynotes;
 
 import android.app.Activity;
 import android.appwidget.AppWidgetManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RemoteViews;
 
 public class EditNote extends Activity {
 	private Integer widgetId;
@@ -55,13 +57,16 @@ public class EditNote extends Activity {
 	}
 	
 	private void updateWidget() {
-		Intent intent = new Intent(this, HandyNotes.class);
-		intent.setAction("android.appwidget.action.APPWIDGET_UPDATE");
+		Context context = getBaseContext();
 		
-		int[] ids = {widgetId};
-		intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids);
-		sendBroadcast(intent);
-
+		AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);	
+		
+		RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.show_note);
+		
+		views.setTextViewText(R.id.showNoteText, editText.getText());
+		
+		appWidgetManager.updateAppWidget(widgetId, views);
+		
 		finish();
 	}
 }
