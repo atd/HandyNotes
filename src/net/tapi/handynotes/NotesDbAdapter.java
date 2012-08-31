@@ -76,24 +76,22 @@ public class NotesDbAdapter {
     }
     
     public String showNoteText(int wId) throws SQLException {
+        String result = "";
 
-        Cursor mCursor =
-
+    	Cursor mCursor =
             mDb.query(true, DATABASE_TABLE, new String[] {KEY_ROWID, KEY_BODY}, KEY_ROWID + "=" + wId, null,
                     null, null, null, null);
-        if (mCursor != null) {
-            mCursor.moveToFirst();
-        }
-        
-        String result = "";
-        
-        if (mCursor.getCount() > 0) {
-        	result = mCursor.getString(mCursor.getColumnIndex(KEY_BODY));
-        }
-        
-        mCursor.close();
-        return result;
-        	
+
+    	if (mCursor != null) {
+        	mCursor.moveToFirst();
+
+        	if (mCursor.getCount() > 0) {
+            		result = mCursor.getString(mCursor.getColumnIndex(KEY_BODY));
+        	}
+        	mCursor.close();
+    	}
+
+    	return result;
     }
     
     public boolean updateNote(int wId, String body) {
