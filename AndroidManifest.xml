@@ -24,6 +24,16 @@
 		</receiver>
 		
 		<receiver
+			android:name=".HandyNotes21"
+			android:label="@string/handy_note_21">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<meta-data android:name="android.appwidget.provider"
+				android:resource="@xml/widget_21" />
+		</receiver>
+
+		<receiver
 			android:name=".HandyNotes33"
 			android:label="@string/handy_note_33">
 			<intent-filter>
@@ -74,6 +84,6 @@
 			</intent-filter>
 		</receiver>
     </application>
-    <uses-sdk android:minSdkVersion="3" />
+    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="4" />
 
 </manifest> 
