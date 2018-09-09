@@ -85,5 +85,6 @@
 		</receiver>
     </application>
     <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="4" />
+    <supports-screens android:xlargeScreens="true" />
 
 </manifest> 
