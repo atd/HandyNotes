@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">HandyNotes</string>
+<string name="add">చేర్చు</string>
+<string name="update">నవీకరణ</string>
+<string name="handy_note_11">సులభ గమనిక (1x1)</string>
+<string name="handy_note_22">సులభ గమనిక (2x2)</string>
+<string name="handy_note_21">సులభ గమనిక (2x1)</string>
+<string name="handy_note_33">సులభ గమనిక (3x3)</string>
+<string name="handy_note_41">సులభ గమనిక (4x1)</string>
+<string name="handy_note_42">సులభ గమనిక (4x2)</string>
+<string name="handy_note_44">సులభ గమనిక (4x4)</string>
+</resources>
